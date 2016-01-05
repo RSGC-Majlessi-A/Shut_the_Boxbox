@@ -29,7 +29,18 @@ void draw() {
 
   textSize(75); // putting in numbers
   fill(0);
-  text("1", 25, 151);
+  text("1", 25, 151); // first tile 
+  text("2", 124, 151);
+  text("3", 227, 151);
+  text("4", 321, 151);
+  text("5", 425, 151);
+  text("6", 522, 151);
+  text("7", 625, 151);
+  text("8", 733, 151);
+  text("9", 825, 151);
+  text("10", 901, 151);
+  text("11", 1006, 151);
+  text("12", 1105, 151);
 }
 void keyPressed() {
   x = int(random(1, 6)); //the int command in front of random allows you to use integers with the random function
