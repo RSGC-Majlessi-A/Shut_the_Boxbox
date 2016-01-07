@@ -5,10 +5,7 @@ String b = "Dice roll is ";
 void setup() {
   size ( 1200, 600 ); // canvas size 
   background( 29, 111, 11); // board color
-}
-
-void draw() {
-  fill(216, 159, 35); // coloring the tiels 
+  fill(216, 159, 35); // coloring the tiles 
   rect(0, 0, 100, 300); // making each tile ( tile 1)
   rect(100, 0, 100, 300); // tile 2
   rect(200, 0, 100, 300);//tile 3
@@ -21,8 +18,9 @@ void draw() {
   rect(900, 0, 100, 300);//tile10
   rect(1000, 0, 100, 300); //tile 11
   rect(1100, 0, 100, 300); //tile 12 
+}
 
-
+void draw() {
 
   textSize(75); // putting in numbers
   fill(0);
@@ -60,6 +58,11 @@ void mouseClicked() {
 
   if (mouseX > 0 && mouseX < 100 && mouseY > 0 && mouseY < 300) {
     fill(29, 111, 11);
-    rect(0, 0, 100, 300);
+    rect(0, 0, 100, 300); // shut the first tile 
+  }
+    
+    if (mouseX > 100 && mouseX < 200 && mouseY > 0 && mouseY < 300) {
+    fill(29, 111, 11);
+    rect(100, 0, 100, 300); // shut the second tile 
   }
 }
