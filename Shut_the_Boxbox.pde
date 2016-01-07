@@ -20,6 +20,19 @@ void setup() {
   rect(1100, 0, 100, 300); //tile 12
   
   // instructions 
+  fill(188, 57, 21);
+  rect(0, 300, 400, 400);
+  fill(0);
+  textSize(32);
+  text("Da Rules", 125, 350);
+  textSize(14);
+  text("You can only subtract/add your numbers", 0, 400);
+  text("X to dice roll", 0, 425);
+  text("Z to clear dice roll", 0, 450);
+  text("If a player puts a tile down, they get respect and go again", 0, 475);
+  text("First player to shut the box wins", 0 , 500);
+  text("Three players maximum", 0 , 525);
+  
 }
 
 void draw() {
