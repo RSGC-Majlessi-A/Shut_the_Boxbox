@@ -1,7 +1,6 @@
 int x;
 int y;
 String b = "Dice roll is ";
-
 void setup() {
   size ( 1200, 600 ); // canvas size 
   background( 29, 111, 11); // board color
@@ -18,7 +17,6 @@ void setup() {
   rect(900, 0, 100, 300);//tile10
   rect(1000, 0, 100, 300); //tile 11
   rect(1100, 0, 100, 300); //tile 12
-  
   // instructions 
   fill(188, 57, 21);
   rect(0, 300, 400, 400);
@@ -26,17 +24,14 @@ void setup() {
   textSize(32);
   text("Da Rules", 125, 350);
   textSize(14);
-  text("You can only subtract/add your numbers", 0, 400);
+  text("You can only suxbtract/add your numbers", 0, 400);
   text("X to dice roll", 0, 425);
   text("Z to clear dice roll", 0, 450);
   text("If a player puts a tile down, they get respect and go again", 0, 475);
-  text("First player to shut the box wins", 0 , 500);
-  text("Three players maximum", 0 , 525);
-  
+  text("First player to shut the box wins", 0, 500);
+  text("Three players maximum", 0, 525);
 }
-
 void draw() {
-
   textSize(75); // putting in numbers
   fill(0);
   text("1", 25, 151); // first tile 
@@ -53,16 +48,14 @@ void draw() {
   text("12", 1105, 151);// twelfth tile
 }
 void keyPressed() {
-
   if (key == 'x') { 
-    x = int(random(1, 6)); //the int command in front of random allows you to use integers with the random function
+    x = int(random(1, 7)); //the int command in front of random allows you to use integers with the random function
     textSize(32);// setting text size
     text(b + x, 600, 450); // placing text on screen with variables
-    y = int(random(1, 6));  //making random number for y value
+    y = int(random(1, 7));  //making random number for y value
     textSize(32); //setting text size
     text(b + y, 600, 500); // placing tex on screen with variables.
   }
-
   if (key == 'z') {
     fill(29, 111, 11);
     rect(400, 300, 1200, 800); // reset the dice roll by putting a green square over it
@@ -70,7 +63,6 @@ void keyPressed() {
 }
 
 void mouseClicked() {
-
   if (mouseX > 0 && mouseX < 100 && mouseY > 0 && mouseY < 300) {
     fill(29, 111, 11);
     rect(0, 0, 100, 300); // shut the first tile
