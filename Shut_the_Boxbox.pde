@@ -22,7 +22,7 @@ void setup() {
   rect(0, 300, 400, 400);
   fill(0);
   textSize(32);
-  text("Da Rules", 125, 350);
+  text("Da Rules", 125, 350);// all on page rules 
   textSize(14);
   text("You can only suxbtract/add your numbers", 0, 400);
   text("X to dice roll", 0, 425);
@@ -30,6 +30,7 @@ void setup() {
   text("If a player puts a tile down, they get respect and go again", 0, 475);
   text("First player to shut the box wins", 0, 500);
   text("Three players maximum", 0, 525);
+  text("You cannot pass turns", 0, 550);
 }
 void draw() {
   textSize(75); // putting in numbers
@@ -77,7 +78,7 @@ void mouseClicked() {
   }
   if (mouseX > 300 && mouseX < 400 && mouseY > 0 && mouseY < 300) {
     fill(29, 111, 11);
-    rect(300, 0, 100, 300); // shut the fourth tile
+    rect(300, 0, 100 , 300); // shut the fourth tile
   }
   if (mouseX > 400 && mouseX < 500 && mouseY > 0 && mouseY < 300) {
     fill(29, 111, 11);
