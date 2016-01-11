@@ -31,6 +31,7 @@ void setup() {
   text("First player to shut the box wins", 0, 500);
   text("Three players maximum", 0, 525);
   text("You cannot pass turns", 0, 550);
+  text("R to reset the tiles", 0 , 575); 
 }
 void draw() {
   textSize(75); // putting in numbers
@@ -60,6 +61,21 @@ void keyPressed() {
   if (key == 'z') {
     fill(29, 111, 11);
     rect(400, 300, 1200, 800); // reset the dice roll by putting a green square over it
+  }
+  if (key == 'r') { // making a reset button
+    fill(216, 159, 35); // coloring the tiles 
+  rect(0, 0, 100, 300); // making each tile ( tile 1)
+  rect(100, 0, 100, 300); // tile 2
+  rect(200, 0, 100, 300);//tile 3
+  rect(300, 0, 100, 300);//tile4
+  rect(400, 0, 100, 300);//tile5
+  rect(500, 0, 100, 300);//tile6
+  rect(600, 0, 100, 300);//tile7
+  rect(700, 0, 100, 300);//tile8
+  rect(800, 0, 100, 300);//tile 9 
+  rect(900, 0, 100, 300);//tile10
+  rect(1000, 0, 100, 300); //tile 11
+  rect(1100, 0, 100, 300); //tile 12
   }
 }
 
