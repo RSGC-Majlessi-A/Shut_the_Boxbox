@@ -33,10 +33,9 @@ void setup() {
   text("Three players maximum", 0, 525);
   text("You cannot pass turns", 0, 550);
   text("R to reset the tiles", 0, 575);
-  photo = loadImage("LeHand .png");
+  //photo = loadImage("LeHand .png");
 }
-void draw() {
-  
+void draw() { 
   textSize(75); // putting in numbers
   fill(0);
   text("1", 25, 151); // first tile 
@@ -51,7 +50,8 @@ void draw() {
   text("10", 901, 151);// tenth tile
   text("11", 1006, 151);// eleventh tile
   text("12", 1105, 151);// twelfth tile
-  image(photo, mouseX, mouseY, width/7, height/5);
+  //image(photo, mouseX, mouseY, width/7, height/5);
+
 }
 void keyPressed() {
   if (key == 'x') { 
@@ -69,7 +69,7 @@ void keyPressed() {
   if (key == 'r') { // making a reset button
     fill(216, 159, 35); // coloring the tiles 
     rect(0, 0, 100, 300); // making each tile ( tile 1)
-    rect(100, 0, 100, 300); // tile 2
+    rect(100, 0, 100, 300);//tile 2
     rect(200, 0, 100, 300);//tile 3
     rect(300, 0, 100, 300);//tile4
     rect(400, 0, 100, 300);//tile5
