@@ -1,6 +1,7 @@
 int x;
 int y;
 String b = "Dice roll is ";
+PImage photo; 
 void setup() {
   size ( 1200, 600 ); // canvas size 
   background( 29, 111, 11); // board color
@@ -31,9 +32,11 @@ void setup() {
   text("First player to shut the box wins", 0, 500);
   text("Three players maximum", 0, 525);
   text("You cannot pass turns", 0, 550);
-  text("R to reset the tiles", 0 , 575); 
+  text("R to reset the tiles", 0, 575);
+  photo = loadImage("LeHand .png");
 }
 void draw() {
+  
   textSize(75); // putting in numbers
   fill(0);
   text("1", 25, 151); // first tile 
@@ -48,6 +51,7 @@ void draw() {
   text("10", 901, 151);// tenth tile
   text("11", 1006, 151);// eleventh tile
   text("12", 1105, 151);// twelfth tile
+  image(photo, mouseX, mouseY, width/7, height/5);
 }
 void keyPressed() {
   if (key == 'x') { 
@@ -64,18 +68,18 @@ void keyPressed() {
   }
   if (key == 'r') { // making a reset button
     fill(216, 159, 35); // coloring the tiles 
-  rect(0, 0, 100, 300); // making each tile ( tile 1)
-  rect(100, 0, 100, 300); // tile 2
-  rect(200, 0, 100, 300);//tile 3
-  rect(300, 0, 100, 300);//tile4
-  rect(400, 0, 100, 300);//tile5
-  rect(500, 0, 100, 300);//tile6
-  rect(600, 0, 100, 300);//tile7
-  rect(700, 0, 100, 300);//tile8
-  rect(800, 0, 100, 300);//tile 9 
-  rect(900, 0, 100, 300);//tile10
-  rect(1000, 0, 100, 300); //tile 11
-  rect(1100, 0, 100, 300); //tile 12
+    rect(0, 0, 100, 300); // making each tile ( tile 1)
+    rect(100, 0, 100, 300); // tile 2
+    rect(200, 0, 100, 300);//tile 3
+    rect(300, 0, 100, 300);//tile4
+    rect(400, 0, 100, 300);//tile5
+    rect(500, 0, 100, 300);//tile6
+    rect(600, 0, 100, 300);//tile7
+    rect(700, 0, 100, 300);//tile8
+    rect(800, 0, 100, 300);//tile 9 
+    rect(900, 0, 100, 300);//tile10
+    rect(1000, 0, 100, 300); //tile 11
+    rect(1100, 0, 100, 300); //tile 12
   }
 }
 
@@ -94,7 +98,7 @@ void mouseClicked() {
   }
   if (mouseX > 300 && mouseX < 400 && mouseY > 0 && mouseY < 300) {
     fill(29, 111, 11);
-    rect(300, 0, 100 , 300); // shut the fourth tile
+    rect(300, 0, 100, 300); // shut the fourth tile
   }
   if (mouseX > 400 && mouseX < 500 && mouseY > 0 && mouseY < 300) {
     fill(29, 111, 11);
